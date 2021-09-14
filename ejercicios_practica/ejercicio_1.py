@@ -1,15 +1,11 @@
-# Matplotlib [Python]
-# Ejercicios de práctica
-
-# Autor: Inove Coding School
-# Version: 2.0
-
 # IMPORTANTE: NO borrar los comentarios
 # que aparecen en verde con el hashtag "#"
 
 # Ejercicios de matplotlib
 import numpy as np
 import matplotlib.pyplot as plt
+
+
 
 
 if __name__ == '__main__':
@@ -29,6 +25,8 @@ if __name__ == '__main__':
     y = []
     for i in x:
         y.append(i**2)
+        
+   
 
     # Crear una "figura" y crear un "ax" con add_subplot
     # Graficar el "line plot" de "y" en función de "x"
@@ -37,5 +35,13 @@ if __name__ == '__main__':
     # Darle color a la línea a su elección
 
     # Crear acá su gráfico
+    
+    fig = plt.figure()
+    fig.suptitle('Gráfico 1',c='g', fontsize=20)
+    ax = fig.add_subplot()    
+    ax.plot(x,y,c='darkblue', label='Eje "X"')
+    ax.legend()
+    ax.grid()
+    plt.show()
 
     print("terminamos")
