@@ -43,7 +43,29 @@ if __name__ == '__main__':
     #  graf3 | graf4
     # Utilizar add_subplot para lograr este efecto
     # de "2 filas" "2 columna" de gráficos
+    fig = plt.figure()
 
+    ax1 = fig.add_subplot(2, 2, 1)  # 2 fila, 2 columnas
+    ax2 = fig.add_subplot(2, 2, 2)
+    ax3 = fig.add_subplot(2, 2, 3)
+    ax4 = fig.add_subplot(2, 2, 4)
+    
+    ax1.plot(x, y1, c="green", label="y1 = x^2")
+    ax1.legend()
+    ax1.grid(ls="-")
+
+    ax2.plot(x, y2, c="red", label="y2 = x^3")
+    ax2.legend()
+    ax2.grid(ls=":")
+    
+    ax3.plot(x, y3, c="blue", label="y3 = x^4")
+    ax3.legend()
+    ax3.grid(ls="--")
+
+    ax4.plot(x, y4, c="yellow", label="y4 = raiz_cuadrada(X)")
+    ax4.legend()
+    ax4.grid(ls="-.")
+    
     # Se debe colocar en la leyenda la función que representa
     # cada gráfico
 
@@ -53,5 +75,5 @@ if __name__ == '__main__':
     # Colocar una grilla a elección
 
     # Crear acá su gráfico
-
+    plt.show()
     print("terminamos")
